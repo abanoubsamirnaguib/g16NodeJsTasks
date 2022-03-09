@@ -1,4 +1,4 @@
-const addTask = document.querySelector("#addTask")   //null <form>
+const addTask = document.querySelector("#addTask")   
 const tableBody = document.querySelector("#tableBody")
 const tableSingle = document.querySelector("#tableSingle")
 const taskHeads = [ 'name', 'address', 'balance' ]
