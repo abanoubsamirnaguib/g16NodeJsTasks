@@ -20,7 +20,7 @@ const creatMyOwnElements = (parent, htmlElement, txt, classes, attr) => {
 };
 
 const article = document.getElementById("article");
-api("https://newsapi.org/v22/top-headlines?country=EG&apiKey=a8c3234e03f4448f8097caf7bce06f4e", (result, error) => {
+api("https://newsapi.org/v2/top-headlines?country=EG&apiKey=a8c3234e03f4448f8097caf7bce06f4e", (result, error) => {
     // console.log(result, error);
     if (result) {
         // console.log(result.articles);
