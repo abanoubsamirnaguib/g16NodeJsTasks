@@ -1,0 +1,48 @@
+[
+    {
+        "accNum": 1646973974307,
+        "name": "Abanoub_Samir",
+        "intialBalance": 1000,
+        "remainigBalance": 1200,
+        "opt": [
+            {
+                "val": 100,
+                "type": "add",
+                "time": "2022-03-11T04:48:01.696Z",
+                "remainigBalance": 1100
+            },
+            {
+                "val": 100,
+                "type": "withdraw",
+                "time": "2022-03-11T04:48:22.324Z",
+                "remainigBalance": 1000
+            },
+            {
+                "val": 200,
+                "type": "add",
+                "time": "2022-03-11T05:11:20.694Z",
+                "remainigBalance": 1200
+            }
+        ]
+    },
+    {
+        "accNum": 1646973997005,
+        "name": "marwa",
+        "intialBalance": 2000,
+        "remainigBalance": 2200,
+        "opt": [
+            {
+                "val": 500,
+                "type": "withdraw",
+                "time": "2022-03-11T04:49:48.743Z",
+                "remainigBalance": 1500
+            },
+            {
+                "val": 700,
+                "type": "add",
+                "time": "2022-03-11T04:50:06.165Z",
+                "remainigBalance": 2200
+            }
+        ]
+    }
+]
