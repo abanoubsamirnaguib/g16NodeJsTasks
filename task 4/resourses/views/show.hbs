@@ -1,0 +1,48 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    <div class="row mb-3 justifiy-content-end">
+        {{#if isEmpty}}
+        <div class="alert alert-danger">No users yet</div>
+        {{else}}
+        <div class="border border-primary border-4 p-4 m-4">
+            <h3>Name: {{user.name}}</h3>
+            <h3>Age: {{user.age}}</h3>
+            <h3>Email: {{user.email}}</h3>
+            <h3>Intial Balance: {{user.intialBalance}}</h3>
+            <h3>Remainig Balance: {{user.remainigBalance}}</h3>
+            {{!-- <h3>Operation: {{user.opt}}</h3> --}}
+            {{#unless user.opt}}
+            <div class="alert alert-danger">
+                <h4 class="text-center">No operation yet</h4>
+            </div>
+            {{/unless}}
+
+            {{#if user.opt}}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>type</th>
+                        <th>value</th>
+                        <th>remainig Balance</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each user.opt}}
+
+                    <tr>
+                        <td>{{this.type}}</td>
+                        <td>{{this.val}}</td>
+                        <td>{{this.remainigBalance}}</td>
+                        <td>{{this.time}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+</section>
+{{>footer}}
