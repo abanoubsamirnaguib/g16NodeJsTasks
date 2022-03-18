@@ -4,14 +4,13 @@ const { ObjectId } = require("mongodb")
 // const users = dealWithJson.readData()
 
 const add = (userId, val) => {
-
     db(async (err, connection) => {
         if (err) res.send(err)
         const user = await connection.collection("user").findOne({ _id: userId });
         user.opt.push({
             val: val,
             type: "add",
-            time: new Date(),
+            time: new Date().toLocaleString(),
             remainigBalance: user.remainigBalance + val
         })
         await connection.collection("user").updateOne({ _id: userId }, {
@@ -30,7 +29,7 @@ const withdraw = (userId, val) => {
             user.opt.push({
             val: val,
             type: "withdraw",
-            time: new Date(),
+            time: new Date().toLocaleString(),
             remainigBalance: user.remainigBalance - val
         })
         await connection.collection("user").updateOne({ _id: userId }, {

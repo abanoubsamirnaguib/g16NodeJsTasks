@@ -17,6 +17,7 @@ const show = (req, res) => {
     db(async (err, connection) => {
         if (err) res.send(err)
         const user = await connection.collection("user").findOne({ _id: new ObjectId(req.params.id) });
+        
         res.render("show", {
             pageTitle: "show",
             user,
