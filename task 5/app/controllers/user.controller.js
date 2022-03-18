@@ -17,7 +17,7 @@ const show = (req, res) => {
     db(async (err, connection) => {
         if (err) res.send(err)
         const user = await connection.collection("user").findOne({ _id: new ObjectId(req.params.id) });
-        
+
         res.render("show", {
             pageTitle: "show",
             user,
@@ -41,7 +41,7 @@ const addUserLogic = (req, res) => {
         remainigBalance: +req.body.intialBalance,
         opt: []
     }
-    // res.send(user)
+    
     db(async (err, connection) => {
         if (err) res.send(err)
         const userData = await connection.collection("user").insertOne({ ...user })

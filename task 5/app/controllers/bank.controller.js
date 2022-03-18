@@ -90,13 +90,6 @@ const optLogic = (req, res) => {
             withdraw(new ObjectId(req.params.id), +req.body.opValue);
         }
 
-
-        // const updateUser = {
-        //     $set: {...user}
-        // }
-        // const userData = await connection.collection("user").updateOne({ _id: new ObjectId(req.params.id) }, updateUser)
-
-        // console.log(userData);
         res.redirect("/")
     })
 }
